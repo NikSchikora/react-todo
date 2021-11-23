@@ -1,38 +1,74 @@
-.App {
-  text-align: center;
+body {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  background-image: radial-gradient(
+    circle farthest-corner at 10% 20%,
+    rgba(37, 145, 251, 0.98) 0.1%,
+    rgba(0, 7, 128, 1) 99.8%
+  );
 }
 
-.App-link {
-  color: #61dafb;
+.card {
+  text-align: center;
+  max-width: 40rem;
+  background-color: #fff;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  padding: 2rem 4rem;
+  border-radius: 20px;
+  margin-bottom: 10rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.todoControls {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.todoControls > input {
+  font-size: 15pt;
+  margin: .5rem 1rem;
+}
+
+.button {
+  margin: .5rem 1rem;
+  font-size: 12pt;
+  font-weight: lighter;
+  text-transform: uppercase;
+  padding: .5rem 2rem;
+  background: none;
+  border: solid 2px rgba(37, 145, 251, 0.98);
+}
+
+h1 {
+  color: #262626;
+  text-transform: uppercase;
+  font-size: 4em;
+  font-weight: normal;
+}
+
+@media (min-width: 640px) {
+  main {
+    max-width: none;
   }
-  to {
-    transform: rotate(360deg);
-  }
+}
+
+.todoWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: #333;
 }
